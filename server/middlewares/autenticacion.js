@@ -38,7 +38,9 @@ if(usuario.role === 'ADMIN_ROLE'){
 
  res.json({
     ok: false,
+    err:{
     message: `Para realizar esta acción debe ser usuario Administrador`
+    }
 })
 }
 
