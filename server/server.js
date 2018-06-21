@@ -4,10 +4,14 @@ const express = require('express')
 
 // Using Node.js `require()`
 const mongoose = require('mongoose');
+const path = require('path');
 
 const app = express();
 
 const bodyParser = require('body-parser')
+
+//Habilitar la carpeta public
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 
 // parse application/x-www-form-urlencoded
